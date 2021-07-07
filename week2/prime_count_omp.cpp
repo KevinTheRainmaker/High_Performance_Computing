@@ -57,7 +57,7 @@ int main (int argc, char *argv[])
 
     cout << "  " << setw(8) << "N"
          << "  " << setw(18) << "Count of primes"
-         << "  " << setw(18) << "Numer of threads"
+         << "  " << setw(18) << "Number of threads"
          << "  " << setw(30) << "Elapsed wall clock time (sec)" << "\n";
 
     cout << "  " << setw(8) << n
