@@ -12,7 +12,7 @@ int prime_count ( int n )
     int i, j, prime, total_prime=0;
 
     #pragma omp parallel for reduction(+:total_prime) \
-                             schedule(static) private(i, j, prime)
+                             schedule(runtime) private(i, j, prime)
     for ( i = 2; i <= n; i++ ) {
         prime = 1;
         for ( j = 2; j < i; j++ ) {
@@ -38,7 +38,7 @@ int main (int argc, char *argv[])
 
     // Returns the maximum value that can be returned by a call to the OMP_GET_NUM_THREADS function
     num_threads = omp_get_max_threads();
-
+    
     cout << "\n";
     cout << "SCHEDULE_OPENMP\n";
     cout << "  C++/OpenMP version\n";
