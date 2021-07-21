@@ -6,8 +6,7 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv){
   // Just simply set N(4) X M(4) matrix and M(4) X 1 vector
   int N=4, M=4;
   int A[N*M], Apart[M], B[M], X[N];
@@ -41,8 +40,7 @@ int main(int argc, char **argv)
     for(int i=0; i<N; i++)
       cout << "X[" << i << "]=" << X[i] << endl;  
 
-  MPI_Finalize();  // MPI finalize
-
-  return 0;     // Exit
-
+  // MPI Finalize
+  MPI_Finalize();
+  return 0;
 }

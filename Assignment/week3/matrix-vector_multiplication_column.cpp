@@ -48,9 +48,7 @@ int main(int argc, char **argv){
       cout << "X[" << i << "]=" << X[i] << endl;
   }
 
-//========== MPI finalize ==========
-  MPI_Finalize();  // MPI finalize
-
-  return 0;     // Exit
-
+//MPI finalize
+  MPI_Finalize();
+  return 0;
 }
