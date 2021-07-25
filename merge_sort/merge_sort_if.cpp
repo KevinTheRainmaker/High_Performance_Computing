@@ -59,6 +59,7 @@ int main ()
 {
     // number of array
     int n;
+    cout << "Type N: ";
     cin >> n;
     cout << "* n = " <<  n << endl;
 
@@ -72,11 +73,11 @@ int main ()
     }
 
     if (TEST) {
-        cout << "Before Merge Sorting:" << endl;
+        cout << "Before Merge Sorting: ";
         for (int i=0; i<n; i++) {
             cout << numberArray[i] << " ";
         }
-        cout << endl;
+	cout << "\n";
     }
 
     // call merge sort
@@ -87,15 +88,16 @@ int main ()
         MergeSort(numberArray, 0, n-1);
     }
     double end = omp_get_wtime();
-    cout << "Time: " << end-begin << " (s)" << endl;
+    double elapsed = end - begin;
 
     if (TEST) {
-        cout << "After Merge Sorting:" << endl;
+        cout << "After Merge Sorting: ";
         for (int i=0; i<n; i++) {
             cout << numberArray[i] << " ";
         }
-        cout << endl;
+	cout << "\n";
     }
+    cout << "Elapsed Time: " << elapsed << "sec" << endl; 
     delete[] numberArray;
 
     return 0;
