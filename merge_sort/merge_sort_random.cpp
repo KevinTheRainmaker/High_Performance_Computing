@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <time.h>
 #include <omp.h>
 
 #define TEST 1  // 1: TEST mode to print out, 0: REAL mode
