@@ -1,7 +1,7 @@
 #include <iostream>
 #include <omp.h>
 
-#define MAX_PARALLEL_RECURSIVE_LEVEL 4
+#define MAX_PARALLEL_RECURSIVE 4
 #define NITERS (100*1000*1000ULL)
 
 using namespace std;
@@ -40,7 +40,7 @@ double pi(unsigned long long n){
 	#pragma omp parallel shared(res)
 	{
 		#pragma omp single
-		res = pi_recur(h, 0, MAX_PARALLEL_RECURSIVE_LEVEL, 1, n);
+		res = pi_recur(h, 0, MAX_PARALLEL_RECURSIVE, 1, n);
 	}
 
 	return res * h;
